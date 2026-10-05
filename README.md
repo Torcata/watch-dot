@@ -24,52 +24,54 @@
 
 # Watch Dot
 
-Habla con tu Dot de ChatGPT directamente desde el Apple Watch, incluso cuando el iPhone se queda en casa. Watch Dot es un cliente nativo de watchOS pensado para relojes con red celular (probado en un Apple Watch Ultra 2).
+Talk to your ChatGPT Dot straight from your Apple Watch, even when your iPhone stays at home. Watch Dot is a native watchOS client built for cellular watches (tested on an Apple Watch Ultra 2).
 
-> ⚠️ **Proyecto experimental.** OpenAI no ofrece una API pública para chatear con el Dot personal. Watch Dot usa el mismo protocolo que la app de escritorio, así que puede dejar de funcionar si OpenAI lo cambia.
+> ⚠️ **Experimental project.** OpenAI doesn't offer a public API for chatting with your personal Dot. Watch Dot uses the same protocol as the desktop app, so it may stop working if OpenAI changes it.
 
-## Qué hace
+## What it does
 
-- **Chat directo con tu Dot:** escribe o dicta un mensaje, toca la flecha y la respuesta llega al reloj. Es la misma conversación que ves en ChatGPT.
-- **Usa tu Dot sin necesidad de iPhone:** el iPhone solo se usa para iniciar sesión. Después, el reloj conversa y renueva la sesión por su cuenta, con Wi‑Fi o datos móviles.
-- **Sincronización a demanda:** para traer mensajes enviados desde otros dispositivos, llega al final del chat y desliza hacia arriba.
-- **Complicación para la carátula:** un acceso directo para abrir el chat de un toque.
+- **Chat directly with your Dot:** type or dictate a message, tap the arrow, and the reply arrives on your watch. It's the same conversation you see in ChatGPT.
+- **Use your Dot without your iPhone:** the iPhone is only needed to sign in. After that, the watch chats and renews the session on its own, over Wi‑Fi or cellular.
+- **On-demand sync:** to pull in messages sent from other devices, scroll to the bottom of the chat and swipe up.
+- **Watch face complication:** a shortcut to open the chat with a single tap.
 
-No incluye notificaciones, respuestas por voz ni conexión permanente en segundo plano.
+## Next Features
+- **Push notifications**
+- **Voice replies**
 
-## Requisitos
+## Requirements
 
-- Mac con Xcode y Swift 6
-- iPhone con iOS 17 o posterior, con Developer Mode activado
-- Apple Watch con watchOS 10 o posterior, emparejado con ese iPhone
-- Una cuenta de ChatGPT con Dot
+- Mac with Xcode and Swift 6
+- iPhone running iOS 17 or later, with Developer Mode enabled
+- Apple Watch running watchOS 10 or later, paired with that iPhone
+- A ChatGPT account with Dot
 
-## Instalación
+## Installation
 
-1. Abre `WatchDot.xcodeproj` en Xcode.
-2. Elige el esquema **WatchDotPhone** y tu iPhone como destino. Revisa que los tres targets usen tu equipo de firma.
-3. Pulsa **⌘R**. Se instala la app del iPhone, que trae dentro la del reloj.
-4. En el iPhone, abre la app **Watch**, ve a la pestaña **Mi reloj** y baja hasta **Apps disponibles**. Toca **Instalar** junto a Watch Dot.
-   *(Si tienes activada la instalación automática de apps, puede que ya esté instalada.)*
+1. Open `WatchDot.xcodeproj` in Xcode.
+2. Choose the **WatchDotPhone** scheme and your iPhone as the destination. Make sure all three targets use your signing team.
+3. Press **⌘R**. This installs the iPhone app, which bundles the watch app.
+4. On your iPhone, open the **Watch** app, go to the **My Watch** tab and scroll down to **Available Apps**. Tap **Install** next to Watch Dot.
+   *(If automatic app install is turned on, it may already be installed.)*
 
-Para actualizar, repite el paso 3. Se conservan tu sesión y tu historial.
+To update, repeat step 3. Your session and history are kept.
 
-## Primer inicio de sesión
+## First sign-in
 
-1. Abre Watch Dot en el reloj **y** en el iPhone.
-2. Toca **Continuar con ChatGPT** (en cualquiera de los dos).
-3. Inicia sesión en el navegador que aparece en el iPhone.
-4. Espera a que el reloj confirme la conexión. El punto verde junto al nombre de tu Dot indica que la sesión está activa.
+1. Open Watch Dot on your watch **and** on your iPhone.
+2. Tap **Continuar con ChatGPT** ("Continue with ChatGPT") on either device.
+3. Sign in using the browser that opens on your iPhone.
+4. Wait for the watch to confirm the connection. A green dot next to your Dot's name means the session is active.
 
-Listo: desde aquí el iPhone ya no es necesario.
+That's it: from now on you don't need your iPhone.
 
-## Añadir la complicación
+## Adding the complication
 
-La complicacion de Apple Watch ofrece un acceso directo para comodidad al invocar tu asistente Dot
-1. Mantén pulsada la carátula → **Editar** → **Complicaciones**.
-2. Elige un espacio circular o de esquina y selecciona **Watch Dot**.
-3. Pulsa la Digital Crown para guardar.
+The Apple Watch complication gives you a handy shortcut to summon your Dot assistant.
+1. Touch and hold the watch face → **Edit** → **Complications**.
+2. Pick a circular or corner slot and select **Watch Dot**.
+3. Press the Digital Crown to save.
 
-## Licencia
+## License
 
-Software libre bajo [GPL-3.0-only](LICENSE). Autoría y procedencia en [NOTICE](NOTICE).
+Free software under [GPL-3.0-only](LICENSE). Authorship and provenance in [NOTICE](NOTICE).
